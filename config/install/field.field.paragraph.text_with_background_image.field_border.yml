@@ -1,0 +1,21 @@
+uuid: b7214e2a-14f5-42ce-a604-ea2912c8645d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border
+    - paragraphs.paragraphs_type.text_with_background_image
+  module:
+    - options
+id: paragraph.text_with_background_image.field_border
+field_name: field_border
+entity_type: paragraph
+bundle: text_with_background_image
+label: Border
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

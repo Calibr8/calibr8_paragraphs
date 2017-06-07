@@ -1,0 +1,25 @@
+uuid: 0b4718f7-686d-49d0-9827-030f30786a8f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_style
+    - paragraphs.paragraphs_type.columns
+  module:
+    - options
+_core:
+  default_config_hash: f8tZvggDBev3trCrn6WJewHKeJFHalFgaVUcj9Ia5b8
+id: paragraph.columns.field_title_style
+field_name: field_title_style
+entity_type: paragraph
+bundle: columns
+label: Title-style
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

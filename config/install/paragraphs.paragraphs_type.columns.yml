@@ -1,0 +1,9 @@
+uuid: c56fdd5f-48cb-4d53-ad61-0ee3f95a0c8e
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-84a8Tla1_WO0hw4MXM5dQeOeVRnxd3FjxYMsmEnr20'
+id: columns
+label: Columns
+behavior_plugins: {  }

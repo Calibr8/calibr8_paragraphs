@@ -1,0 +1,157 @@
+uuid: 66bf6165-2305-4112-8287-08e9a7427f27
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.form.field_background
+    - field.field.paragraph.form.field_border
+    - field.field.paragraph.form.field_form
+    - field.field.paragraph.form.field_paragraph_width
+    - field.field.paragraph.form.field_subtitle
+    - field.field.paragraph.form.field_subtitle_style
+    - field.field.paragraph.form.field_text
+    - field.field.paragraph.form.field_text_align
+    - field.field.paragraph.form.field_title
+    - field.field.paragraph.form.field_title_align
+    - field.field.paragraph.form.field_title_style
+    - paragraphs.paragraphs_type.form
+  module:
+    - field_group
+    - text
+    - webform
+third_party_settings:
+  field_group:
+    group_opmaak_instellingen:
+      children:
+        - field_paragraph_width
+        - field_background
+        - field_border
+        - field_title_align
+        - field_text_align
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        label: 'Layout settings'
+        id: ''
+        classes: form-wrapper-layout-settings
+        open: false
+        required_fields: false
+      label: 'Layout settings'
+    group_title_wrapper:
+      children:
+        - field_title_style
+        - field_title
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Title wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'title-style-group clearfix'
+      label: 'Title wrapper'
+    group_subtitle_wrapper:
+      children:
+        - field_subtitle_style
+        - field_subtitle
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'title-style-group clearfix'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Subtitle wrapper'
+_core:
+  default_config_hash: uL56EP8mDXi2R_6X-23VEz2FApXmGobqWuAUxECMyyQ
+id: paragraph.form.default
+targetEntityType: paragraph
+bundle: form
+mode: default
+content:
+  field_background:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_border:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_form:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  field_paragraph_width:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_subtitle:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subtitle_style:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_text_align:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_title:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_align:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title_style:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

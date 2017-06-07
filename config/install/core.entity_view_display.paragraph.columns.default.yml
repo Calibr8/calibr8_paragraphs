@@ -1,0 +1,132 @@
+uuid: f6c4e855-5726-4e88-bee4-5b37a2783465
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.columns.field_background
+    - field.field.paragraph.columns.field_border
+    - field.field.paragraph.columns.field_paragraph
+    - field.field.paragraph.columns.field_paragraph_width
+    - field.field.paragraph.columns.field_subtitle
+    - field.field.paragraph.columns.field_subtitle_style
+    - field.field.paragraph.columns.field_text
+    - field.field.paragraph.columns.field_text_align
+    - field.field.paragraph.columns.field_title
+    - field.field.paragraph.columns.field_title_align
+    - field.field.paragraph.columns.field_title_style
+    - paragraphs.paragraphs_type.columns
+  module:
+    - calibr8_ds
+    - ds
+    - entity_reference_revisions
+    - options
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: onecol
+      path: modules/custom/calibr8_ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          column_1: div
+          footer: div
+        outer_wrapper: section
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - field_title
+        - field_subtitle
+      column_1:
+        - field_text
+        - field_paragraph
+_core:
+  default_config_hash: 5RtKSl_x5Jbk6LZ6ZQfB_zTePaeZOgHNUpZ9zi7lFjE
+id: paragraph.columns.default
+targetEntityType: paragraph
+bundle: columns
+mode: default
+content:
+  field_background:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_border:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      title_element: field_subtitle_style
+      title_class: field--subtitle
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: title_element
+    region: content
+  field_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_text_align:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      title_element: field_title_style
+      title_class: field--title
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: title_element
+    region: content
+hidden:
+  created: true
+  field_paragraph_width: true
+  field_subtitle_style: true
+  field_title_align: true
+  field_title_style: true
+  uid: true

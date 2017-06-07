@@ -1,0 +1,21 @@
+uuid: 5ad1ccd2-a43c-4d0c-8309-42faf565af98
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.form
+_core:
+  default_config_hash: O_OffPSCxgwclPQEUsBR4mTjiQdcL5r4X8p50B4llJI
+id: paragraph.form.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: form
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

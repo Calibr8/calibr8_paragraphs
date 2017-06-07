@@ -1,0 +1,38 @@
+uuid: fa99098c-03b7-4308-b8b5-12ed6e83e298
+langcode: nl
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: eAaSFkliLTiB0ghArk6TICARXeROlaItuTy9j0p6FTQ
+id: paragraph.field_subtitle_style
+field_name: field_subtitle_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: h1
+      label: h1
+    -
+      value: h2
+      label: h2
+    -
+      value: h3
+      label: h3
+    -
+      value: h4
+      label: h4
+    -
+      value: h5
+      label: h5
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: 68ff26f2-7ffb-4ab5-a0bd-68439832aaa3
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RuOFAcD01UN33UOng1_I-NVMnGyJUdgCcpNe0sEzWII
+id: text_with_background_image
+label: 'Text with background image'
+behavior_plugins: {  }

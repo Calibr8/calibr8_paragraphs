@@ -1,0 +1,23 @@
+uuid: acac72f3-891a-4ca0-a194-248da5974067
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_align
+    - paragraphs.paragraphs_type.form
+  module:
+    - options
+id: paragraph.form.field_text_align
+field_name: field_text_align
+entity_type: paragraph
+bundle: form
+label: 'Text align'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

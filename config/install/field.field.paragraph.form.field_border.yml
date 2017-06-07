@@ -1,0 +1,21 @@
+uuid: a8a90421-8929-40b1-a3eb-cea22c280f50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border
+    - paragraphs.paragraphs_type.form
+  module:
+    - options
+id: paragraph.form.field_border
+field_name: field_border
+entity_type: paragraph
+bundle: form
+label: Border
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

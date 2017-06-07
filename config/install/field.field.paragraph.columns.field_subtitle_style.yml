@@ -1,0 +1,25 @@
+uuid: 9b41931c-6c3a-43a3-9ac6-dd6e6cd04e7d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle_style
+    - paragraphs.paragraphs_type.columns
+  module:
+    - options
+_core:
+  default_config_hash: 2FiyH6T_Wt1J4gWECdcx1FHT4aU0lZhbLadEHdFF6_8
+id: paragraph.columns.field_subtitle_style
+field_name: field_subtitle_style
+entity_type: paragraph
+bundle: columns
+label: Subtitle-style
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: h3
+default_value_callback: ''
+settings: {  }
+field_type: list_string

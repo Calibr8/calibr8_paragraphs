@@ -1,0 +1,10 @@
+uuid: cea23eb8-30ac-481f-9dd3-562933cf16be
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.image_align_right
+label: 'Image align right'
+targetEntityType: paragraph
+cache: true

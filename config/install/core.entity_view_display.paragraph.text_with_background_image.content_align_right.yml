@@ -1,0 +1,145 @@
+uuid: 50b96b53-a231-406b-9133-ebd73bed4730
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.content_align_right
+    - field.field.paragraph.text_with_background_image.field_background
+    - field.field.paragraph.text_with_background_image.field_border
+    - field.field.paragraph.text_with_background_image.field_call_to_action
+    - field.field.paragraph.text_with_background_image.field_image
+    - field.field.paragraph.text_with_background_image.field_paragraph_width
+    - field.field.paragraph.text_with_background_image.field_subtitle
+    - field.field.paragraph.text_with_background_image.field_subtitle_style
+    - field.field.paragraph.text_with_background_image.field_text
+    - field.field.paragraph.text_with_background_image.field_text_align
+    - field.field.paragraph.text_with_background_image.field_title
+    - field.field.paragraph.text_with_background_image.field_title_align
+    - field.field.paragraph.text_with_background_image.field_title_style
+    - field.field.paragraph.text_with_background_image.field_view_mode
+    - paragraphs.paragraphs_type.text_with_background_image
+    - responsive_image.styles.wide_4_1
+  module:
+    - calibr8_ds
+    - ds
+    - link
+    - responsive_image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: onecol_image
+      path: modules/custom/calibr8_ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          image: div
+          header: div
+          column_1: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      image:
+        - field_image
+      header:
+        - field_title
+        - field_subtitle
+      column_1:
+        - field_text
+      footer:
+        - field_call_to_action
+_core:
+  default_config_hash: LnBxBMB9ZGJQRf63m1lITc-BxNM0XTKpHFlCKV2ndQE
+id: paragraph.text_with_background_image.content_align_right
+targetEntityType: paragraph
+bundle: text_with_background_image
+mode: content_align_right
+content:
+  field_call_to_action:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: wide_4_1
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: responsive_image
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings:
+      title_element: field_subtitle_style
+      title_class: field--subtitle
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: title_element
+    region: content
+  field_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      title_element: field_title_style
+      title_class: field--title
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: title_element
+    region: content
+hidden:
+  created: true
+  field_background: true
+  field_border: true
+  field_paragraph_width: true
+  field_subtitle_style: true
+  field_text_align: true
+  field_title_align: true
+  field_title_style: true
+  field_view_mode: true
+  uid: true

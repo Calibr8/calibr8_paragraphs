@@ -1,0 +1,25 @@
+uuid: 35799978-aae9-4bb9-bc4a-755300a507a3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_style
+    - paragraphs.paragraphs_type.text_with_background_image
+  module:
+    - options
+_core:
+  default_config_hash: HqZhHZwcL9Hg51o_3pHlDXL0fhu8FxoLh64VJSU3oYw
+id: paragraph.text_with_background_image.field_title_style
+field_name: field_title_style
+entity_type: paragraph
+bundle: text_with_background_image
+label: Title-style
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

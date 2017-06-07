@@ -1,0 +1,9 @@
+uuid: dfa1d622-0ded-4c1a-8c9f-73eb761cd524
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xKu-eaSYQtshktbafKQyXg9Kc8eweF8skMD8dLHA6Oo
+id: text_with_image
+label: 'Text with image'
+behavior_plugins: {  }

@@ -1,0 +1,121 @@
+uuid: 13fd3bdd-6d96-423f-baa1-ba999b6a0076
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.form.field_background
+    - field.field.paragraph.form.field_border
+    - field.field.paragraph.form.field_form
+    - field.field.paragraph.form.field_paragraph_width
+    - field.field.paragraph.form.field_subtitle
+    - field.field.paragraph.form.field_subtitle_style
+    - field.field.paragraph.form.field_text
+    - field.field.paragraph.form.field_text_align
+    - field.field.paragraph.form.field_title
+    - field.field.paragraph.form.field_title_align
+    - field.field.paragraph.form.field_title_style
+    - paragraphs.paragraphs_type.form
+  module:
+    - calibr8_ds
+    - ds
+    - options
+    - text
+    - webform
+third_party_settings:
+  ds:
+    layout:
+      id: onecol
+      path: modules/custom/calibr8_ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          column_1: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - field_title
+        - field_subtitle
+      column_1:
+        - field_text
+        - field_form
+_core:
+  default_config_hash: 2M_0KNV3-2wpVKjxhyi_uL8hTyFV66zaV3g4_4us-9c
+id: paragraph.form.default
+targetEntityType: paragraph
+bundle: form
+mode: default
+content:
+  field_background:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_border:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_form:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      title_element: field_subtitle_style
+      title_class: field--title
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: title_element
+    region: content
+  field_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_text_align:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      title_element: field_title_style
+      title_class: field--title
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: title_element
+    region: content
+hidden:
+  field_paragraph_width: true
+  field_subtitle_style: true
+  field_title_align: true
+  field_title_style: true

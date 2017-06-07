@@ -1,0 +1,25 @@
+uuid: 241bbfae-8556-4dee-9809-c966e7811504
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle_style
+    - paragraphs.paragraphs_type.text_with_background_image
+  module:
+    - options
+_core:
+  default_config_hash: w9b3dVOWq-NjOUmwwyZu-jkh_5VInCXpGKued6FI-hc
+id: paragraph.text_with_background_image.field_subtitle_style
+field_name: field_subtitle_style
+entity_type: paragraph
+bundle: text_with_background_image
+label: Subtitle-style
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: h3
+default_value_callback: ''
+settings: {  }
+field_type: list_string

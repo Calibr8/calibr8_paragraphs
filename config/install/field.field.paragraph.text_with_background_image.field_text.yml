@@ -1,0 +1,29 @@
+uuid: 55291612-3f32-4b57-b414-8dddeaa4bcc9
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.text_with_background_image
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    full_html: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: onR2ODwwBH4_15jZSG1f1iORw1FnMegjmwXbBI1whgA
+id: paragraph.text_with_background_image.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: text_with_background_image
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

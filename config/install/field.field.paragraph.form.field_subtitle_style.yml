@@ -1,0 +1,25 @@
+uuid: 858776cf-85e1-4012-a1e7-42adb28a3264
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle_style
+    - paragraphs.paragraphs_type.form
+  module:
+    - options
+_core:
+  default_config_hash: HPJme0lCglwUcyaOiHVAtACG5JDui9JIMbvVCytkSoQ
+id: paragraph.form.field_subtitle_style
+field_name: field_subtitle_style
+entity_type: paragraph
+bundle: form
+label: Subtitle-style
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: h3
+default_value_callback: ''
+settings: {  }
+field_type: list_string

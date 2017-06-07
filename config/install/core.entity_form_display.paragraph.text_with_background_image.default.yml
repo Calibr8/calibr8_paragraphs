@@ -1,0 +1,205 @@
+uuid: 4c1c8587-1a5f-42c5-b5f8-0730e86ba55c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image
+    - field.field.paragraph.text_with_background_image.field_background
+    - field.field.paragraph.text_with_background_image.field_border
+    - field.field.paragraph.text_with_background_image.field_call_to_action
+    - field.field.paragraph.text_with_background_image.field_image
+    - field.field.paragraph.text_with_background_image.field_paragraph_width
+    - field.field.paragraph.text_with_background_image.field_subtitle
+    - field.field.paragraph.text_with_background_image.field_subtitle_style
+    - field.field.paragraph.text_with_background_image.field_text
+    - field.field.paragraph.text_with_background_image.field_text_align
+    - field.field.paragraph.text_with_background_image.field_title
+    - field.field.paragraph.text_with_background_image.field_title_align
+    - field.field.paragraph.text_with_background_image.field_title_style
+    - field.field.paragraph.text_with_background_image.field_view_mode
+    - paragraphs.paragraphs_type.text_with_background_image
+  module:
+    - allowed_formats
+    - calibr8_cta
+    - entity_browser
+    - field_group
+    - maxlength
+    - text
+    - view_mode_selector
+third_party_settings:
+  field_group:
+    group_title_wrapper:
+      children:
+        - field_title_style
+        - field_title
+      parent_name: ''
+      weight: 1
+      label: 'Title wrapper'
+      format_type: html_element
+      format_settings:
+        label: 'Title wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'title-style-group clearfix'
+    group_subtitle_wrapper:
+      children:
+        - field_subtitle_style
+        - field_subtitle
+      parent_name: ''
+      weight: 2
+      label: 'Subtitle wrapper'
+      format_type: html_element
+      format_settings:
+        label: 'Subtitle wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'title-style-group clearfix'
+    group_layout_settings:
+      children:
+        - field_view_mode
+        - field_paragraph_width
+        - field_background
+        - field_border
+        - field_title_align
+        - field_text_align
+      parent_name: ''
+      weight: 0
+      label: 'Layout settings'
+      format_type: details
+      format_settings:
+        label: 'Layout settings'
+        id: ''
+        classes: form-wrapper-layout-settings
+        open: false
+        required_fields: false
+    group_cta_wrapper:
+      children:
+        - field_call_to_action
+      parent_name: ''
+      weight: 6
+      label: 'Call to action'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+_core:
+  default_config_hash: NOzyejyAowAUxM2hn1Zm2AfUjh-_C58booK5EMnPo-E
+id: paragraph.text_with_background_image.default
+targetEntityType: paragraph
+bundle: text_with_background_image
+mode: default
+content:
+  field_background:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_border:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_call_to_action:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      classes: "link|Link\nbutton|Button (default)\nbutton button-primary|Button (primary)\nbutton button-secondary|Button (secondary)\nbutton button-grey|Button (grey)"
+      id: ''
+    third_party_settings: {  }
+    type: calibr8_cta_field_widget
+    region: content
+  field_image:
+    weight: 4
+    settings:
+      entity_browser: image
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      open: false
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: entity_browser_file
+  field_paragraph_width:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_subtitle:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subtitle_style:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+      maxlength:
+        maxlength_js: 300
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+        maxlength_js_truncate_html: false
+    type: text_textarea
+    region: content
+  field_text_align:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_align:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title_style:
+    type: options_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_view_mode:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
