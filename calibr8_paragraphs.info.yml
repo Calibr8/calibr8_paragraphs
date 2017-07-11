@@ -1,7 +1,9 @@
 name: Calibr8 Paragraphs
 description: Feature enabling default paragraph types.
+package: Calibr8
 type: module
 core: 8.x
+version: '8.x-1.0'
 dependencies:
   - allowed_formats
   - calibr8_cta
@@ -20,4 +22,3 @@ dependencies:
   - text
   - view_mode_selector
   - webform
-package: Calibr8
