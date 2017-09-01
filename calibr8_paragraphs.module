@@ -1,0 +1,45 @@
+<?php
+
+use Drupal\paragraphs_edit\Form\ParagraphEditForm;
+
+/**
+ * Implements hook_contextual_links_view_alter().
+ *
+ * Change the 'Edit settings' link into off_canvas links.
+ */
+function calibr8_paragraphs_contextual_links_view_alter(&$element, $items) {
+  if (isset($element['#links']['calibr8-paragraphsedit-paragraph'])) {
+    $element['#links']['calibr8-paragraphsedit-paragraph']['attributes'] = [
+      'class' => ['use-ajax'],
+      'data-dialog-type' => 'dialog',
+      'data-dialog-renderer' => 'off_canvas',
+      'data-outside-in-edit' => TRUE,
+    ];
+
+    $element['#attached']['library'][] = 'outside_in/drupal.off_canvas';
+  }
+
+  if (isset($element['#links']['paragraphs-editedit-form'])) {
+  	$element['#links']['paragraphs-editedit-form']['title'] = t('Edit content');
+
+/**
+ * This codes renders the paragraphs_edit form inside a modal
+ *
+    $element['#links']['paragraphs-editedit-form']['attributes'] = [
+      'class' => ['use-ajax'],
+      'data-dialog-type' => 'dialog',
+      'data-dialog-renderer' => 'modal',
+      'data-outside-in-edit' => TRUE,
+    ];
+//*/
+  }
+}
+
+/**
+ * Implements hook_entity_type_build().
+ *
+ * @param \Drupal\Core\Entity\EntityTypeInterface[] $entity_types
+ */
+function calibr8_paragraphs_entity_type_build(array &$entity_types) {
+  $entity_types['paragraph']->setFormClass('settings', ParagraphEditForm::class);
+}

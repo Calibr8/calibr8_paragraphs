@@ -1,0 +1,65 @@
+uuid: 4d2cdae0-c266-4444-b51b-03eb81f5f97c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.settings
+    - field.field.paragraph.form.field_background
+    - field.field.paragraph.form.field_border
+    - field.field.paragraph.form.field_form
+    - field.field.paragraph.form.field_paragraph_width
+    - field.field.paragraph.form.field_subtitle
+    - field.field.paragraph.form.field_subtitle_style
+    - field.field.paragraph.form.field_text
+    - field.field.paragraph.form.field_text_align
+    - field.field.paragraph.form.field_title
+    - field.field.paragraph.form.field_title_align
+    - field.field.paragraph.form.field_title_style
+    - paragraphs.paragraphs_type.form
+_core:
+  default_config_hash: 16cM4rj488thUgWLI7G0J_J65HuINu3oyCJI-G9JBiE
+id: paragraph.form.settings
+targetEntityType: paragraph
+bundle: form
+mode: settings
+content:
+  field_background:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_border:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_paragraph_width:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_align:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title_align:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  field_form: true
+  field_subtitle: true
+  field_subtitle_style: true
+  field_text: true
+  field_title: true
+  field_title_style: true
+  status: true
+  uid: true

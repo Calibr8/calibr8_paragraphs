@@ -18,6 +18,8 @@ dependencies:
   - maxlength
   - options
   - paragraphs
+  - paragraphs_browser
+  - paragraphs_edit
   - responsive_image
   - text
   - view_mode_selector

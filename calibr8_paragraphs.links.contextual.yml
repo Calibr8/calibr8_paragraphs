@@ -1,0 +1,4 @@
+calibr8_paragraphs.edit_paragraph:
+  route_name: calibr8_paragraphs.edit_settings
+  group: paragraph
+  title: 'Edit settings'

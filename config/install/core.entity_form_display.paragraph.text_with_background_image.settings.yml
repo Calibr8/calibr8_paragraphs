@@ -1,0 +1,76 @@
+uuid: cf5d6630-2078-49e7-a078-52f8a494945f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.settings
+    - field.field.paragraph.text_with_background_image.field_background
+    - field.field.paragraph.text_with_background_image.field_border
+    - field.field.paragraph.text_with_background_image.field_call_to_action
+    - field.field.paragraph.text_with_background_image.field_image
+    - field.field.paragraph.text_with_background_image.field_paragraph_width
+    - field.field.paragraph.text_with_background_image.field_subtitle
+    - field.field.paragraph.text_with_background_image.field_subtitle_style
+    - field.field.paragraph.text_with_background_image.field_text
+    - field.field.paragraph.text_with_background_image.field_text_align
+    - field.field.paragraph.text_with_background_image.field_title
+    - field.field.paragraph.text_with_background_image.field_title_align
+    - field.field.paragraph.text_with_background_image.field_title_style
+    - field.field.paragraph.text_with_background_image.field_view_mode
+    - paragraphs.paragraphs_type.text_with_background_image
+  module:
+    - view_mode_selector
+_core:
+  default_config_hash: mUBx3d9mDm7d5y4AFGN7ZZHLzkMB-OPZuLURqNwKxjs
+id: paragraph.text_with_background_image.settings
+targetEntityType: paragraph
+bundle: text_with_background_image
+mode: settings
+content:
+  field_background:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_border:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_paragraph_width:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_align:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title_align:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_view_mode:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  field_call_to_action: true
+  field_image: true
+  field_subtitle: true
+  field_subtitle_style: true
+  field_text: true
+  field_title: true
+  field_title_style: true
+  status: true
+  uid: true

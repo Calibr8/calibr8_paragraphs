@@ -1,0 +1,28 @@
+uuid: 226a6834-cfac-4888-8952-bf639c739889
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: Default
+groups:
+  content:
+    label: Content
+    id: content
+    weight: 0
+  layout:
+    label: Layout
+    id: layout
+    weight: 1
+  form:
+    label: Form
+    id: form
+    weight: 2
+  other:
+    label: Other
+    id: other
+    weight: 3
+map:
+  columns: layout
+  form: form
+  text_with_background_image: content
+  text_with_image: content

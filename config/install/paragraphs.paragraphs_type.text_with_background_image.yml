@@ -1,9 +1,15 @@
 uuid: 68ff26f2-7ffb-4ab5-a0bd-68439832aaa3
 langcode: nl
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    description: 'Paragraph ''text with background image'' can be used to make a header or a call to action block.'
+    image_path: modules/calibrate/calibr8_paragraphs/img/text_with_background_image.png
 _core:
-  default_config_hash: RuOFAcD01UN33UOng1_I-NVMnGyJUdgCcpNe0sEzWII
+  default_config_hash: Xks8NFsAyKsSwbRIErtVBJWGHVf0Bfu0AMtQ5C58G7s
 id: text_with_background_image
 label: 'Text with background image'
 behavior_plugins: {  }

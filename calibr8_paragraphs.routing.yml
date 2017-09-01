@@ -1,0 +1,14 @@
+calibr8_paragraphs.edit_settings:
+  path: '/paragraphs_settings/{root_parent_type}/{root_parent}/paragraphs/{paragraph}/edit'
+  defaults:
+    _entity_form: 'paragraph.settings'
+  requirements:
+    _entity_access: 'root_parent.update'
+    root_parent: \d+
+  options:
+    _admin_route: TRUE
+    parameters:
+      root_parent:
+        type: 'entity:{root_parent_type}'
+      paragraph:
+        type: 'entity:paragraph'
