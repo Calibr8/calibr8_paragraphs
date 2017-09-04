@@ -5,9 +5,11 @@ use Drupal\paragraphs_edit\Form\ParagraphEditForm;
 /**
  * Implements hook_contextual_links_view_alter().
  *
- * Change the 'Edit settings' link into off_canvas links.
+ * Change some contextual links into off_canvas links.
  */
 function calibr8_paragraphs_contextual_links_view_alter(&$element, $items) {
+
+  // show our paragraph settings form inside a off_canvas dialog
   if (isset($element['#links']['calibr8-paragraphsedit-paragraph'])) {
     $element['#links']['calibr8-paragraphsedit-paragraph']['attributes'] = [
       'class' => ['use-ajax'],
@@ -20,23 +22,80 @@ function calibr8_paragraphs_contextual_links_view_alter(&$element, $items) {
   }
 
   if (isset($element['#links']['paragraphs-editedit-form'])) {
+
   	$element['#links']['paragraphs-editedit-form']['title'] = t('Edit content');
 
-/**
- * This codes renders the paragraphs_edit form inside a modal
- *
     $element['#links']['paragraphs-editedit-form']['attributes'] = [
       'class' => ['use-ajax'],
       'data-dialog-type' => 'dialog',
       'data-dialog-renderer' => 'modal',
-      'data-outside-in-edit' => TRUE,
+      'data-dialog-options' => json_encode(['width' => '50%']),
     ];
-//*/
+
+  }
+
+  // set the title for 'Clone' to 'Duplicate'
+  if (isset($element['#links']['paragraphs-editclone-form'])) {
+  	$element['#links']['paragraphs-editclone-form']['title'] = t('Duplicate');
+    $element['#links']['paragraphs-editclone-form']['attributes'] = [
+      'class' => ['use-ajax'],
+      'data-dialog-type' => 'dialog',
+      'data-dialog-renderer' => 'modal',
+      'data-dialog-options' => json_encode(['width' => '50%']),
+    ];
+  }
+
+  if (isset($element['#links']['paragraphs-editdelete-form'])) {
+
+    // open the delete form inside a modal
+    $element['#links']['paragraphs-editdelete-form']['attributes'] = [
+      'class' => ['use-ajax'],
+      'data-dialog-type' => 'dialog',
+      'data-dialog-renderer' => 'modal',
+    ];
+
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function calibr8_paragraphs_form_alter(&$form, $form_state, $form_id) {
+  if (substr($form_id, -18) == '_entity_clone_form') {
+
+  	$params = \Drupal::routeMatch()->getParameters();
+    $paragraph = $params->get('paragraph');
+    $parent_field_name = $paragraph->get('parent_field_name')->getValue()[0]['value'];
+    // we do this based on the paragraph, instead of the url
+    // since the url is wrong for nested paragraphs
+    $parent = $paragraph->getParentEntity();
+
+    // set the default values for the entity to clone to
+    // we use the current entity we are working on
+    $form['paragraphs_edit']['#type'] = 'container';
+    $form['paragraphs_edit']['entity_type'] = [
+    	'#type' => 'value',
+    	'#value' => $parent->getEntityTypeId(),
+    ];
+    $form['paragraphs_edit']['bundle'] = [
+    	'#type' => 'value',
+    	'#value' => $parent->getType(),
+    ];
+    $form['paragraphs_edit']['parent'] = [
+    	'#type' => 'value',
+    	'#value' => $parent->id(),
+    ];
+    $form['paragraphs_edit']['field'] = [
+    	'#type' => 'value',
+    	'#value' => $parent_field_name,
+    ];
+
   }
 }
 
 /**
  * Implements hook_entity_type_build().
+ * Register the settings form mode for paragraphs
  *
  * @param \Drupal\Core\Entity\EntityTypeInterface[] $entity_types
  */
