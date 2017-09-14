@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.form
   module:
     - options
+_core:
+  default_config_hash: cgZRmV4eHCJ_kESImNHDfw_r9tpIyCcidcREYSK_2ag
 id: paragraph.form.field_border
 field_name: field_border
 entity_type: paragraph

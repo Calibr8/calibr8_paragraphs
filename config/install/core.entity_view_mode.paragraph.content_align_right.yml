@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: of64epjP1mUbe2Q4pU3SjEc-mjZW_DGGe2sOfOWEL5Y
 id: paragraph.content_align_right
 label: 'Content align right'
 targetEntityType: paragraph

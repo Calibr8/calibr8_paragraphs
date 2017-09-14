@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: Oy5Sl3JWMrBKBNeYV9Zgr0gNWyJ81_7Fyu3OpzcJ530
 id: paragraph.content_align_center
 label: 'Content align center'
 targetEntityType: paragraph

@@ -1,9 +1,15 @@
 uuid: 1a915c3d-5d5e-4d7e-b3a2-0e5fcaa67aec
 langcode: nl
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    description: 'Paragraph ''form'' can be used to reference an existing form.'
+    image_path: modules/calibrate/calibr8_paragraphs/img/form.png
 _core:
-  default_config_hash: GVZycVXQ60mINQwoT6c-G3qNPrTi-6GmRMTbT9gejog
+  default_config_hash: 7M-52cv88JulSgCyaBl3qvCQa1JYBg7JmNqFhEfa0UE
 id: form
 label: Form
 behavior_plugins: {  }

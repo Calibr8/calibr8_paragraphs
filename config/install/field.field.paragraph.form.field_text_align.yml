@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.form
   module:
     - options
+_core:
+  default_config_hash: pvtegy2SHTgZQkZzpUhFWZX8tqYZSsBbRPAQWq2OT5Y
 id: paragraph.form.field_text_align
 field_name: field_text_align
 entity_type: paragraph

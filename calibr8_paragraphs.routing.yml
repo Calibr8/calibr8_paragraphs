@@ -1,10 +1,87 @@
+calibr8_paragraphs.default:
+  path: '/admin/structure/paragraphs_type/{paragraphs_type}/browsers/default-content'
+  defaults:
+    _controller: '\Drupal\calibr8_paragraphs\Controller\Calibr8ParagraphsController::defaultContent'
+    _title: 'Default content'
+  requirements:
+    _permission: 'administer paragraphs types'
+  options:
+    parameters:
+      paragraphs_type:
+        type: entity:paragraphs_type
+
 calibr8_paragraphs.edit_settings:
-  path: '/paragraphs_settings/{root_parent_type}/{root_parent}/paragraphs/{paragraph}/edit'
+  path: '/calibr8/paragraphs/{root_parent_type}/{root_parent}/paragraphs/{paragraph}/edit'
   defaults:
     _entity_form: 'paragraph.settings'
   requirements:
     _entity_access: 'root_parent.update'
     root_parent: \d+
+  options:
+    _admin_route: TRUE
+    parameters:
+      root_parent:
+        type: 'entity:{root_parent_type}'
+      paragraph:
+        type: 'entity:paragraph'
+
+calibr8_paragraphs.up:
+  path: '/calibr8/paragraphs/{root_parent_type}/{root_parent}/paragraphs/{paragraph}/up'
+  defaults:
+    _title: 'Up'
+    _controller: '\Drupal\calibr8_paragraphs\Controller\Calibr8ParagraphsController::up'
+  requirements:
+    _entity_access: 'root_parent.update'
+    root_parent: \d+
+    js: 'nojs|ajax'
+  options:
+    parameters:
+      root_parent:
+        type: 'entity:{root_parent_type}'
+      paragraph:
+        type: 'entity:paragraph'
+
+calibr8_paragraphs.down:
+  path: '/calibr8/paragraphs/{root_parent_type}/{root_parent}/paragraphs/{paragraph}/down'
+  defaults:
+    _title: 'Down'
+    _controller: '\Drupal\calibr8_paragraphs\Controller\Calibr8ParagraphsController::down'
+  requirements:
+    _entity_access: 'root_parent.update'
+    root_parent: \d+
+    js: 'nojs|ajax'
+  options:
+    parameters:
+      root_parent:
+        type: 'entity:{root_parent_type}'
+      paragraph:
+        type: 'entity:paragraph'
+
+calibr8_paragraphs.duplicate:
+  path: '/calibr8/paragraphs/{root_parent_type}/{root_parent}/paragraphs/{paragraph}/duplicate'
+  defaults:
+    _title: 'Duplicate'
+    _controller: '\Drupal\calibr8_paragraphs\Controller\Calibr8ParagraphsController::duplicate'
+  requirements:
+    _entity_access: 'root_parent.update'
+    root_parent: \d+
+    js: 'nojs|ajax'
+  options:
+    parameters:
+      root_parent:
+        type: 'entity:{root_parent_type}'
+      paragraph:
+        type: 'entity:paragraph'
+
+calibr8_paragraphs.add_select:
+  path: '/calibr8/paragraphs/{root_parent_type}/{root_parent}/paragraphs/{paragraph}/select-type'
+  defaults:
+    _title: 'Select type'
+    _controller: '\Drupal\calibr8_paragraphs\Controller\Calibr8ParagraphsController::selectType'
+  requirements:
+    _entity_access: 'root_parent.update'
+    root_parent: \d+
+    js: 'nojs|ajax'
   options:
     _admin_route: TRUE
     parameters:

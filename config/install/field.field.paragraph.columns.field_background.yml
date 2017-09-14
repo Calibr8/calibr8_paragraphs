@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.columns
   module:
     - options
+_core:
+  default_config_hash: '-8aB8TPowqX29zfqgZUpIJNmKcoKCNVt52DJD2mNxRY'
 id: paragraph.columns.field_background
 field_name: field_background
 entity_type: paragraph

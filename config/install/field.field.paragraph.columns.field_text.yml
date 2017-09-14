@@ -12,6 +12,8 @@ third_party_settings:
   allowed_formats:
     basic_html: '0'
     plain_text: '0'
+_core:
+  default_config_hash: 7UdLmZPP8NH5GIX-U0I2cW49yQRfHLs8LyWfAIn75rs
 id: paragraph.columns.field_text
 field_name: field_text
 entity_type: paragraph

@@ -1,0 +1,4 @@
+calibr8_paragraphs.default:
+  title: 'Default content'
+  route_name: calibr8_paragraphs.default
+  base_route: entity.paragraphs_type.edit_form

@@ -22,15 +22,13 @@ dependencies:
     - calibr8_ds
     - ds
     - link
-    - options
     - responsive_image
     - text
 third_party_settings:
   ds:
     layout:
       id: onecol_image
-      path: modules/custom/calibr8_ds
-      library: ''
+      library: null
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -62,18 +60,6 @@ targetEntityType: paragraph
 bundle: text_with_background_image
 mode: default
 content:
-  field_background:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-  field_border:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
   field_call_to_action:
     weight: 4
     label: hidden
@@ -93,7 +79,7 @@ content:
             lb-col: false
             classes: {  }
     type: link
-    region: content
+    region: footer
   field_image:
     weight: 0
     label: hidden
@@ -109,12 +95,7 @@ content:
             lb-col: false
             classes: {  }
     type: responsive_image
-  field_paragraph_width:
-    weight: 7
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
+    region: image
   field_subtitle:
     weight: 2
     label: hidden
@@ -124,24 +105,20 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: reset
+          id: minimal
           settings:
             lb: ''
+            lb-col: false
+            classes: {  }
     type: title_element
-    region: content
+    region: header
   field_text:
     weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_text_align:
-    weight: 8
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
+    region: column_1
   field_title:
     weight: 1
     label: hidden
@@ -151,14 +128,20 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: reset
+          id: minimal
           settings:
             lb: ''
+            lb-col: false
+            classes: {  }
     type: title_element
-    region: content
+    region: header
 hidden:
   created: true
+  field_background: true
+  field_border: true
+  field_paragraph_width: true
   field_subtitle_style: true
+  field_text_align: true
   field_title_align: true
   field_title_style: true
   field_view_mode: true

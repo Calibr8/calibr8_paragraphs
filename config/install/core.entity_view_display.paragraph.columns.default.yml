@@ -19,14 +19,12 @@ dependencies:
     - calibr8_ds
     - ds
     - entity_reference_revisions
-    - options
     - text
 third_party_settings:
   ds:
     layout:
       id: onecol
-      path: modules/custom/calibr8_ds
-      library: ''
+      library: null
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -54,18 +52,6 @@ targetEntityType: paragraph
 bundle: columns
 mode: default
 content:
-  field_background:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-  field_border:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
   field_paragraph:
     type: entity_reference_revisions_entity_view
     weight: 3
@@ -82,7 +68,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    region: content
+    region: column_1
   field_subtitle:
     weight: 1
     label: hidden
@@ -92,23 +78,20 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: reset
+          id: minimal
           settings:
             lb: ''
+            lb-col: false
+            classes: {  }
     type: title_element
-    region: content
+    region: header
   field_text:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  field_text_align:
-    weight: 7
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
+    region: column_1
   field_title:
     weight: 0
     label: hidden
@@ -118,15 +101,20 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: reset
+          id: minimal
           settings:
             lb: ''
+            lb-col: false
+            classes: {  }
     type: title_element
-    region: content
+    region: header
 hidden:
   created: true
+  field_background: true
+  field_border: true
   field_paragraph_width: true
   field_subtitle_style: true
+  field_text_align: true
   field_title_align: true
   field_title_style: true
   uid: true

@@ -19,8 +19,8 @@ dependencies:
   - options
   - paragraphs
   - paragraphs_browser
-  - paragraphs_edit
   - responsive_image
   - text
   - view_mode_selector
   - webform
+  - outside_in

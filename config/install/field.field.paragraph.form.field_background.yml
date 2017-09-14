@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.form
   module:
     - options
+_core:
+  default_config_hash: DBfoATD_8ZYmuS0Mb07OHb98dE5hg5WXg-n7Fw9l3zk
 id: paragraph.form.field_background
 field_name: field_background
 entity_type: paragraph

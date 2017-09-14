@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_background_image
   module:
     - options
+_core:
+  default_config_hash: cbFRcKTGw61LfGmAQjMAc3s9KZsSjpoqgZ6vI81UZ-M
 id: paragraph.text_with_background_image.field_border
 field_name: field_border
 entity_type: paragraph

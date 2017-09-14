@@ -1,5 +1,10 @@
 <?php
 
+use Drupal\Component\Utility\Html;
+use Drupal\paragraphs\ParagraphInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Render\Element;
 use Drupal\paragraphs_edit\Form\ParagraphEditForm;
 
 /**
@@ -8,18 +13,6 @@ use Drupal\paragraphs_edit\Form\ParagraphEditForm;
  * Change some contextual links into off_canvas links.
  */
 function calibr8_paragraphs_contextual_links_view_alter(&$element, $items) {
-
-  // show our paragraph settings form inside a off_canvas dialog
-  if (isset($element['#links']['calibr8-paragraphsedit-paragraph'])) {
-    $element['#links']['calibr8-paragraphsedit-paragraph']['attributes'] = [
-      'class' => ['use-ajax'],
-      'data-dialog-type' => 'dialog',
-      'data-dialog-renderer' => 'off_canvas',
-      'data-outside-in-edit' => TRUE,
-    ];
-
-    $element['#attached']['library'][] = 'outside_in/drupal.off_canvas';
-  }
 
   if (isset($element['#links']['paragraphs-editedit-form'])) {
 
@@ -36,13 +29,7 @@ function calibr8_paragraphs_contextual_links_view_alter(&$element, $items) {
 
   // set the title for 'Clone' to 'Duplicate'
   if (isset($element['#links']['paragraphs-editclone-form'])) {
-  	$element['#links']['paragraphs-editclone-form']['title'] = t('Duplicate');
-    $element['#links']['paragraphs-editclone-form']['attributes'] = [
-      'class' => ['use-ajax'],
-      'data-dialog-type' => 'dialog',
-      'data-dialog-renderer' => 'modal',
-      'data-dialog-options' => json_encode(['width' => '50%']),
-    ];
+    unset($element['#links']['paragraphs-editclone-form']);
   }
 
   if (isset($element['#links']['paragraphs-editdelete-form'])) {
@@ -55,40 +42,51 @@ function calibr8_paragraphs_contextual_links_view_alter(&$element, $items) {
     ];
 
   }
+
+  if (isset($element['#links']['calibr8-paragraphsedit-settings'])) {
+    $element['#links']['calibr8-paragraphsedit-settings']['attributes'] = [
+      'class' => ['use-ajax'],
+      'data-dialog-type' => 'dialog',
+      'data-dialog-renderer' => 'off_canvas',
+      'data-outside-in-edit' => TRUE,
+    ];
+
+    $element['#attached']['library'][] = 'outside_in/drupal.off_canvas';
+  }
+  if (isset($element['#links']['calibr8-paragraphsmove-up'])) {
+    $element['#links']['calibr8-paragraphsmove-up']['attributes'] = [
+      'class' => ['use-ajax'],
+    ];
+  }
+  if (isset($element['#links']['calibr8-paragraphsmove-down'])) {
+    $element['#links']['calibr8-paragraphsmove-down']['attributes'] = [
+      'class' => ['use-ajax'],
+    ];
+  }
+  if (isset($element['#links']['calibr8-paragraphsduplicate'])) {
+    $element['#links']['calibr8-paragraphsduplicate']['attributes'] = [
+      'class' => ['use-ajax'],
+    ];
+  }
+  if (isset($element['#links']['calibr8-paragraphsadd'])) {
+    $element['#links']['calibr8-paragraphsadd']['attributes'] = [
+      'class' => ['use-ajax'],
+      'data-dialog-type' => 'dialog',
+      'data-dialog-renderer' => 'off_canvas',
+      'data-outside-in-edit' => TRUE,
+    ];
+  }
+  
 }
 
 /**
  * Implements hook_form_alter().
  */
 function calibr8_paragraphs_form_alter(&$form, $form_state, $form_id) {
-  if (substr($form_id, -18) == '_entity_clone_form') {
+  if (substr($form_id, -14) == '_settings_form' && substr($form_id, 0, 10) == 'paragraph_') {
 
-  	$params = \Drupal::routeMatch()->getParameters();
-    $paragraph = $params->get('paragraph');
-    $parent_field_name = $paragraph->get('parent_field_name')->getValue()[0]['value'];
-    // we do this based on the paragraph, instead of the url
-    // since the url is wrong for nested paragraphs
-    $parent = $paragraph->getParentEntity();
-
-    // set the default values for the entity to clone to
-    // we use the current entity we are working on
-    $form['paragraphs_edit']['#type'] = 'container';
-    $form['paragraphs_edit']['entity_type'] = [
-    	'#type' => 'value',
-    	'#value' => $parent->getEntityTypeId(),
-    ];
-    $form['paragraphs_edit']['bundle'] = [
-    	'#type' => 'value',
-    	'#value' => $parent->getType(),
-    ];
-    $form['paragraphs_edit']['parent'] = [
-    	'#type' => 'value',
-    	'#value' => $parent->id(),
-    ];
-    $form['paragraphs_edit']['field'] = [
-    	'#type' => 'value',
-    	'#value' => $parent_field_name,
-    ];
+  dsm($form);
+  	
 
   }
 }
@@ -101,4 +99,17 @@ function calibr8_paragraphs_form_alter(&$form, $form_state, $form_id) {
  */
 function calibr8_paragraphs_entity_type_build(array &$entity_types) {
   $entity_types['paragraph']->setFormClass('settings', ParagraphEditForm::class);
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Using hook_preprocess_field().
+ */
+function calibr8_paragraphs_preprocess_field(&$vars) {
+  if (empty($vars['field_type']) || $vars['field_type'] !== 'entity_reference_revisions') {
+    return;
+  }
+  $vars['attributes']['data-calibr8-paragraphs'] = $vars['field_name'] . '-' . $vars['element']['#object']->id();
 }

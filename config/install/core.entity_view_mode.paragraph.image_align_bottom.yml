@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: zHxMghtuPNnoY75qTHVjB3tkPevFJeDks7zOvkw6oJk
 id: paragraph.image_align_bottom
 label: 'Image align bottom'
 targetEntityType: paragraph

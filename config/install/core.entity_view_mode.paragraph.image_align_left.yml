@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: iwnINTXddWfWLMHMe-xjEaRgVvMDmBFZ4H1EsQru7WY
 id: paragraph.image_align_left
 label: 'Image align left'
 targetEntityType: paragraph

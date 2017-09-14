@@ -1,4 +1,24 @@
-calibr8_paragraphs.edit_paragraph:
+calibr8_paragraphs.edit_settings:
   route_name: calibr8_paragraphs.edit_settings
   group: paragraph
   title: 'Edit settings'
+
+calibr8_paragraphs.move_up:
+  route_name: calibr8_paragraphs.up
+  group: paragraph
+  title: 'Move Up'
+
+calibr8_paragraphs.move_down:
+  route_name: calibr8_paragraphs.down
+  group: paragraph
+  title: 'Move Down'
+
+calibr8_paragraphs.duplicate:
+  route_name: calibr8_paragraphs.duplicate
+  group: paragraph
+  title: 'Duplicate'
+
+calibr8_paragraphs.add:
+  route_name: calibr8_paragraphs.add_select
+  group: paragraph
+  title: 'Add below'

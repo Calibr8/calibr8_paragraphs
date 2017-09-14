@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_image
   module:
     - options
+_core:
+  default_config_hash: cl1GXylfnMDYmnATaOfTEaaggN5Zwns-sDXYfYHKR64
 id: paragraph.text_with_image.field_text_align
 field_name: field_text_align
 entity_type: paragraph

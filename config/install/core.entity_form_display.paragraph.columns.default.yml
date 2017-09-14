@@ -87,11 +87,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_border:
     weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_paragraph:
     type: entity_reference_paragraphs
     weight: 4
@@ -136,11 +138,13 @@ content:
         maxlength_js_enforce: false
         maxlength_js_truncate_html: false
     type: text_textarea
+    region: content
   field_text_align:
     weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_title:
     weight: 4
     settings:

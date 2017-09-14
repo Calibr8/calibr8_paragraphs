@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: 08WgbckQOllFvTTnoUq6QVZZfKRN1QnZGjo6--FlPhw
 id: paragraph.content_align_left
 label: 'Content align left'
 targetEntityType: paragraph

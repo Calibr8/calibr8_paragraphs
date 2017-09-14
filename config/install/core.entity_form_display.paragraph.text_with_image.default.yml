@@ -107,11 +107,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_border:
     weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_call_to_action:
     weight: 6
     settings:
@@ -176,6 +178,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_title:
     weight: 12
     settings:

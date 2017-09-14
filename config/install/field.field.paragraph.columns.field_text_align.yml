@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.columns
   module:
     - options
+_core:
+  default_config_hash: R5Npnsxd4zCn6HaAr6i1hQ-8ZG-QbzSAJRRgwKIKydQ
 id: paragraph.columns.field_text_align
 field_name: field_text_align
 entity_type: paragraph

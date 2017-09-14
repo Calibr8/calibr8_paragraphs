@@ -26,4 +26,6 @@ settings:
     auto_create: false
   default_data: ''
   status: '1'
+  open: ''
+  close: ''
 field_type: webform
