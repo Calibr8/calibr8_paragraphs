@@ -22,3 +22,4 @@ dependencies:
   - text
   - view_mode_selector
   - webform
+  - paragraphs_browser
