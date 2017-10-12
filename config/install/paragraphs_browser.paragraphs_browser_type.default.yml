@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: Default
+groups:
+  layout:
+    label: Layout
+    id: layout
+    weight: 0
+  form:
+    label: Form
+    id: form
+    weight: 1
+  content:
+    label: Content
+    id: content
+    weight: 2
+map:
+  text_with_background_image: content
+  form: form
+  columns: layout
+  text_with_image: content

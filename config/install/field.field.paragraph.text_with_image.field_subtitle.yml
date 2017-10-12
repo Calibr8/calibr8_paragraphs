@@ -1,12 +1,9 @@
-uuid: abe37eed-26f3-4462-9e87-cab5501e98ac
 langcode: nl
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_subtitle
     - paragraphs.paragraphs_type.text_with_image
-_core:
-  default_config_hash: oCLljJC7U-J4Yy___LqHG6u8StMfsdl-RU1FPA1u-Kw
 id: paragraph.text_with_image.field_subtitle
 field_name: field_subtitle
 entity_type: paragraph

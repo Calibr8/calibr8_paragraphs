@@ -1,9 +1,13 @@
-uuid: 68ff26f2-7ffb-4ab5-a0bd-68439832aaa3
 langcode: nl
 status: true
-dependencies: {  }
-_core:
-  default_config_hash: RuOFAcD01UN33UOng1_I-NVMnGyJUdgCcpNe0sEzWII
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: modules/calibrate/calibr8_paragraphs/img/text_with_background_image.png
 id: text_with_background_image
 label: 'Text with background image'
+icon_uuid: null
+description: ''
 behavior_plugins: {  }

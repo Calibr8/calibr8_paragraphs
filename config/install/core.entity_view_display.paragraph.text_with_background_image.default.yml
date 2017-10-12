@@ -1,4 +1,3 @@
-uuid: 5df83db5-7839-4138-95dc-37a8cb4dcadb
 langcode: nl
 status: true
 dependencies:
@@ -55,8 +54,6 @@ third_party_settings:
         - field_text
       footer:
         - field_call_to_action
-_core:
-  default_config_hash: LnBxBMB9ZGJQRf63m1lITc-BxNM0XTKpHFlCKV2ndQE
 id: paragraph.text_with_background_image.default
 targetEntityType: paragraph
 bundle: text_with_background_image
@@ -68,12 +65,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_border:
     weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_call_to_action:
     weight: 4
     label: hidden
@@ -109,12 +108,14 @@ content:
             lb-col: false
             classes: {  }
     type: responsive_image
+    region: content
   field_paragraph_width:
     weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_subtitle:
     weight: 2
     label: hidden
@@ -142,6 +143,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_title:
     weight: 1
     label: hidden

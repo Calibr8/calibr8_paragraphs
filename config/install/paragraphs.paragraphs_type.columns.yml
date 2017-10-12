@@ -1,9 +1,13 @@
-uuid: c56fdd5f-48cb-4d53-ad61-0ee3f95a0c8e
 langcode: nl
 status: true
-dependencies: {  }
-_core:
-  default_config_hash: '-84a8Tla1_WO0hw4MXM5dQeOeVRnxd3FjxYMsmEnr20'
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: modules/calibrate/calibr8_paragraphs/img/columns.png
 id: columns
 label: Columns
+icon_uuid: null
+description: ''
 behavior_plugins: {  }

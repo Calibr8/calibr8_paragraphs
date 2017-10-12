@@ -1,4 +1,3 @@
-uuid: e100fa2f-fe12-4d39-a6a8-4efcfcb48406
 langcode: nl
 status: true
 dependencies:
@@ -12,8 +11,6 @@ third_party_settings:
   allowed_formats:
     full_html: '0'
     plain_text: '0'
-_core:
-  default_config_hash: dwB3GS26g2kLuKR-g5Qr4SGLkZX2moU6Zn50Y4sNRk4
 id: paragraph.form.field_text
 field_name: field_text
 entity_type: paragraph

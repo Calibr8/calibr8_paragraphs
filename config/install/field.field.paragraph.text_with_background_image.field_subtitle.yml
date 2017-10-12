@@ -1,12 +1,9 @@
-uuid: 57c41930-97ea-42b5-8653-3af6182b39ac
 langcode: nl
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_subtitle
     - paragraphs.paragraphs_type.text_with_background_image
-_core:
-  default_config_hash: EKf7plzl9aeeqq8qNzUxNplH4Srkv-IulMY5dtSKY-Q
 id: paragraph.text_with_background_image.field_subtitle
 field_name: field_subtitle
 entity_type: paragraph

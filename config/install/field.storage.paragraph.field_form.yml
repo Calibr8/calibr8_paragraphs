@@ -1,12 +1,9 @@
-uuid: b6b58a56-2a53-4d67-9a9a-47f0995c52f0
 langcode: nl
 status: true
 dependencies:
   module:
     - paragraphs
     - webform
-_core:
-  default_config_hash: 5SQxwl6Y8v1axLZJSluKH3JCkaKukJ2gFObnMcOmano
 id: paragraph.field_form
 field_name: field_form
 entity_type: paragraph

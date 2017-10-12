@@ -1,12 +1,9 @@
-uuid: fa99098c-03b7-4308-b8b5-12ed6e83e298
 langcode: nl
 status: true
 dependencies:
   module:
     - options
     - paragraphs
-_core:
-  default_config_hash: eAaSFkliLTiB0ghArk6TICARXeROlaItuTy9j0p6FTQ
 id: paragraph.field_subtitle_style
 field_name: field_subtitle_style
 entity_type: paragraph

@@ -1,4 +1,3 @@
-uuid: 21a5147e-0393-40d6-a46a-d8362be368ba
 langcode: nl
 status: true
 dependencies:
@@ -55,8 +54,6 @@ third_party_settings:
         - field_text
       footer:
         - field_call_to_action
-_core:
-  default_config_hash: LnBxBMB9ZGJQRf63m1lITc-BxNM0XTKpHFlCKV2ndQE
 id: paragraph.text_with_background_image.content_align_center
 targetEntityType: paragraph
 bundle: text_with_background_image
@@ -97,6 +94,7 @@ content:
             lb-col: false
             classes: {  }
     type: responsive_image
+    region: content
   field_subtitle:
     weight: 2
     label: hidden

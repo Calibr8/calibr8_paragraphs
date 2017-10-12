@@ -1,4 +1,3 @@
-uuid: 09dc3f80-dd65-4d68-82b3-fe0718523c40
 langcode: nl
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.form
   module:
     - options
-_core:
-  default_config_hash: DvN8ADNuGQFjg2AVVolcSVPwCnFcAH4Hm8J93nBOlUk
 id: paragraph.form.field_title_style
 field_name: field_title_style
 entity_type: paragraph

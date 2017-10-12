@@ -1,12 +1,9 @@
-uuid: 93c2b09f-6e64-495a-bcb2-8918d20e940d
 langcode: nl
 status: true
 dependencies:
   module:
     - paragraphs
     - view_mode_selector
-_core:
-  default_config_hash: 5gUDLI--gmtn3BvC7TLiftIvwR-K1fW1zaXNz7HpWPk
 id: paragraph.field_view_mode
 field_name: field_view_mode
 entity_type: paragraph

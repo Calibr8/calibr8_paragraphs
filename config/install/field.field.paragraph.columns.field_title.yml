@@ -1,12 +1,9 @@
-uuid: b12fd154-6d5f-4797-a3d4-66bc0e3094df
 langcode: nl
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_title
     - paragraphs.paragraphs_type.columns
-_core:
-  default_config_hash: _WKf39E88rlyseyOGKZauqEeAwEIQGyugCBHye7y-R4
 id: paragraph.columns.field_title
 field_name: field_title
 entity_type: paragraph

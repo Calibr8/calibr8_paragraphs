@@ -1,4 +1,3 @@
-uuid: b53b5369-31f6-4a86-adf2-855b896d0d4d
 langcode: nl
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_image
   module:
     - link
-_core:
-  default_config_hash: xaK7cYrhvdoiwxDCDoty4zRMQfZIY0f4Qevgl_jgWTE
 id: paragraph.text_with_image.field_call_to_action
 field_name: field_call_to_action
 entity_type: paragraph

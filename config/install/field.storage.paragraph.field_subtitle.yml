@@ -1,11 +1,8 @@
-uuid: 0b1ae054-07c4-44a5-904e-7ed41d0c1649
 langcode: nl
 status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: dP2jfP69rPED2Wst9ji_TLcKWn2j_RUcN-RwxZFY8ZM
 id: paragraph.field_subtitle
 field_name: field_subtitle
 entity_type: paragraph

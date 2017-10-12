@@ -1,4 +1,3 @@
-uuid: 9910838f-e1a8-4cb2-b96f-209546934a0b
 langcode: nl
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_image
   module:
     - options
-_core:
-  default_config_hash: m6Ldz0jTvvbpvgcDJf04T9bAg2BXCOWzFH324ehc35Q
 id: paragraph.text_with_image.field_paragraph_width
 field_name: field_paragraph_width
 entity_type: paragraph

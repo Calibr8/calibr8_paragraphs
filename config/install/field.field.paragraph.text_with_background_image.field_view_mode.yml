@@ -1,4 +1,3 @@
-uuid: 9caaa7dd-e99f-44b4-afcd-fbbaa7f2b0f7
 langcode: nl
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_background_image
   module:
     - view_mode_selector
-_core:
-  default_config_hash: xVIkTNcEIsvB8a3s2NuwtnYyIYjmxsxB4EYe6uq4vUU
 id: paragraph.text_with_background_image.field_view_mode
 field_name: field_view_mode
 entity_type: paragraph

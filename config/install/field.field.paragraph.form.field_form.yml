@@ -1,4 +1,3 @@
-uuid: b85a6824-37ff-4426-ab57-75e7c672c983
 langcode: nl
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.form
   module:
     - webform
-_core:
-  default_config_hash: p9NFahEs4tIHpsRkZDVT25m-KFHkrIwpZYOz8dBXrkQ
 id: paragraph.form.field_form
 field_name: field_form
 entity_type: paragraph
@@ -26,4 +23,6 @@ settings:
     auto_create: false
   default_data: ''
   status: '1'
+  open: ''
+  close: ''
 field_type: webform

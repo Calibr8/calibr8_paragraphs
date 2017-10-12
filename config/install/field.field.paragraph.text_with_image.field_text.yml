@@ -1,4 +1,3 @@
-uuid: 48e55761-e62a-4864-834a-22144b52898b
 langcode: nl
 status: true
 dependencies:
@@ -13,8 +12,6 @@ third_party_settings:
     basic_html: '0'
     full_html: '0'
     plain_text: '0'
-_core:
-  default_config_hash: YlQS791vmn_AUZbRzymQqBeUbtoaaZhzYbZmgEC2DmE
 id: paragraph.text_with_image.field_text
 field_name: field_text
 entity_type: paragraph

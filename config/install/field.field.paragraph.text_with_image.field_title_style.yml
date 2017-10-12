@@ -1,4 +1,3 @@
-uuid: 473dfc01-c9d9-4fd6-8487-1876a21bea36
 langcode: nl
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_image
   module:
     - options
-_core:
-  default_config_hash: HDeTqHQOYejseRtyDQynLYvsjOyNAGk4Zrd-XFDI_9w
 id: paragraph.text_with_image.field_title_style
 field_name: field_title_style
 entity_type: paragraph

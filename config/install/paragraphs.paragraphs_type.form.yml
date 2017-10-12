@@ -1,9 +1,13 @@
-uuid: 1a915c3d-5d5e-4d7e-b3a2-0e5fcaa67aec
 langcode: nl
 status: true
-dependencies: {  }
-_core:
-  default_config_hash: GVZycVXQ60mINQwoT6c-G3qNPrTi-6GmRMTbT9gejog
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: modules/calibrate/calibr8_paragraphs/img/form.png
 id: form
 label: Form
+icon_uuid: null
+description: ''
 behavior_plugins: {  }

@@ -1,14 +1,15 @@
-name: Calibr8 Paragraphs
-description: Feature enabling default paragraph types.
+name: 'Calibr8 Paragraphs'
+description: 'Feature enabling default paragraph types.'
 package: Calibr8
 type: module
 core: 8.x
-version: '8.x-1.0'
+version: 8.x-1.0
 dependencies:
   - allowed_formats
   - calibr8_cta
   - calibr8_ds
   - calibr8_media
+  - ds
   - entity_reference_revisions
   - field
   - field_group
@@ -16,10 +17,11 @@ dependencies:
   - image
   - link
   - maxlength
+  - node
   - options
   - paragraphs
+  - paragraphs_browser
   - responsive_image
   - text
   - view_mode_selector
   - webform
-  - paragraphs_browser

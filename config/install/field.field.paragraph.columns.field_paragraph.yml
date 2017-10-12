@@ -1,4 +1,3 @@
-uuid: 75d3f5bc-863d-46cb-a179-3f60f5be61b5
 langcode: nl
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.columns
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: B6o6IblyumUjPP9WeS-6-iQ9Qgc6cSJWh_QgmSIPRDs
 id: paragraph.columns.field_paragraph
 field_name: field_paragraph
 entity_type: paragraph

@@ -1,4 +1,3 @@
-uuid: f6c4e855-5726-4e88-bee4-5b37a2783465
 langcode: nl
 status: true
 dependencies:
@@ -47,8 +46,6 @@ third_party_settings:
       column_1:
         - field_text
         - field_paragraph
-_core:
-  default_config_hash: 5RtKSl_x5Jbk6LZ6ZQfB_zTePaeZOgHNUpZ9zi7lFjE
 id: paragraph.columns.default
 targetEntityType: paragraph
 bundle: columns
@@ -60,12 +57,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_border:
     weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_paragraph:
     type: entity_reference_revisions_entity_view
     weight: 3
@@ -103,12 +102,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_text_align:
     weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_title:
     weight: 0
     label: hidden

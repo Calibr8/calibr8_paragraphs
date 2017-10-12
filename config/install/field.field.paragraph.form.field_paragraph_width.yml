@@ -1,4 +1,3 @@
-uuid: 0bf76185-46bb-4363-99e0-52aa93542807
 langcode: nl
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.form
   module:
     - options
-_core:
-  default_config_hash: XtJ6CTxB4G-RSvdnjKEF7b_iptnMuhytJ4HXResie8k
 id: paragraph.form.field_paragraph_width
 field_name: field_paragraph_width
 entity_type: paragraph

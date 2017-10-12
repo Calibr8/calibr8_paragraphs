@@ -1,9 +1,7 @@
-uuid: 4c1c8587-1a5f-42c5-b5f8-0730e86ba55c
 langcode: nl
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image
     - field.field.paragraph.text_with_background_image.field_background
     - field.field.paragraph.text_with_background_image.field_border
     - field.field.paragraph.text_with_background_image.field_call_to_action
@@ -17,12 +15,13 @@ dependencies:
     - field.field.paragraph.text_with_background_image.field_title_align
     - field.field.paragraph.text_with_background_image.field_title_style
     - field.field.paragraph.text_with_background_image.field_view_mode
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.text_with_background_image
   module:
     - allowed_formats
     - calibr8_cta
-    - entity_browser
     - field_group
+    - image
     - maxlength
     - text
     - view_mode_selector
@@ -86,7 +85,7 @@ third_party_settings:
       children:
         - field_call_to_action
       parent_name: ''
-      weight: 6
+      weight: 5
       label: 'Call to action'
       format_type: details
       format_settings:
@@ -94,8 +93,6 @@ third_party_settings:
         required_fields: true
         classes: ''
         id: ''
-_core:
-  default_config_hash: NOzyejyAowAUxM2hn1Zm2AfUjh-_C58booK5EMnPo-E
 id: paragraph.text_with_background_image.default
 targetEntityType: paragraph
 bundle: text_with_background_image
@@ -106,11 +103,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_border:
     weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_call_to_action:
     weight: 5
     settings:
@@ -122,22 +121,19 @@ content:
     type: calibr8_cta_field_widget
     region: content
   field_image:
-    weight: 4
+    type: image_image
+    weight: 3
+    region: content
     settings:
-      entity_browser: image
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      open: false
+      progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: entity_browser_file
   field_paragraph_width:
     weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_subtitle:
     weight: 9
     settings:
@@ -153,7 +149,7 @@ content:
     type: options_select
     region: content
   field_text:
-    weight: 5
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -173,6 +169,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_title:
     weight: 2
     settings:
