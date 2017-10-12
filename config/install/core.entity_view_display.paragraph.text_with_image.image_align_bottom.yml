@@ -1,3 +1,4 @@
+uuid: dcb973b8-3517-428d-8891-df4b519aaeb7
 langcode: nl
 status: true
 dependencies:
@@ -45,8 +46,7 @@ third_party_settings:
   ds:
     layout:
       id: onecol_image
-      path: modules/custom/calibr8_ds
-      library: ''
+      library: null
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -71,6 +71,8 @@ third_party_settings:
         - field_text
       footer:
         - field_call_to_action
+_core:
+  default_config_hash: yLSyQgVD7ml105IWzuCfcn_4KBFpeHrdjf_tk5ZZ2cI
 id: paragraph.text_with_image.image_align_bottom
 targetEntityType: paragraph
 bundle: text_with_image
@@ -87,7 +89,7 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
+    region: footer
   field_image:
     weight: 0
     label: hidden
@@ -103,7 +105,7 @@ content:
             lb-col: false
             classes: {  }
     type: responsive_image
-    region: content
+    region: image
   field_subtitle:
     weight: 2
     label: hidden
@@ -113,18 +115,20 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: reset
+          id: minimal
           settings:
             lb: ''
+            lb-col: false
+            classes: {  }
     type: title_element
-    region: content
+    region: header
   field_text:
     weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
+    region: column_1
   field_title:
     weight: 1
     label: hidden
@@ -134,11 +138,13 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: reset
+          id: minimal
           settings:
             lb: ''
+            lb-col: false
+            classes: {  }
     type: title_element
-    region: content
+    region: header
 hidden:
   created: true
   field_background: true
