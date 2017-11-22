@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.text_with_background_image.field_background
     - field.field.paragraph.text_with_background_image.field_border
     - field.field.paragraph.text_with_background_image.field_call_to_action
-    - field.field.paragraph.text_with_background_image.field_image
     - field.field.paragraph.text_with_background_image.field_media_image
     - field.field.paragraph.text_with_background_image.field_paragraph_width
     - field.field.paragraph.text_with_background_image.field_subtitle
