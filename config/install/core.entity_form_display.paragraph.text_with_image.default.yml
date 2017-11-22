@@ -1,11 +1,13 @@
+uuid: 90779c82-c4b0-4e07-964b-30f65c1ce840
 langcode: nl
 status: true
 dependencies:
   config:
+    - entity_browser.browser.upload
     - field.field.paragraph.text_with_image.field_background
     - field.field.paragraph.text_with_image.field_border
     - field.field.paragraph.text_with_image.field_call_to_action
-    - field.field.paragraph.text_with_image.field_image
+    - field.field.paragraph.text_with_image.field_media_image
     - field.field.paragraph.text_with_image.field_paragraph_width
     - field.field.paragraph.text_with_image.field_subtitle
     - field.field.paragraph.text_with_image.field_subtitle_style
@@ -15,13 +17,12 @@ dependencies:
     - field.field.paragraph.text_with_image.field_title_align
     - field.field.paragraph.text_with_image.field_title_style
     - field.field.paragraph.text_with_image.field_view_mode
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.text_with_image
   module:
     - allowed_formats
     - calibr8_cta
+    - entity_browser
     - field_group
-    - image
     - maxlength
     - text
     - view_mode_selector
@@ -85,7 +86,7 @@ third_party_settings:
       children:
         - field_call_to_action
       parent_name: ''
-      weight: 5
+      weight: 6
       label: 'Call to action'
       format_type: details
       format_settings:
@@ -94,6 +95,8 @@ third_party_settings:
         classes: ''
         open: false
         required_fields: false
+_core:
+  default_config_hash: GUTuEWRU-T7B2smciq1ZpLoZUvYvCICyddVV7PGpUPw
 id: paragraph.text_with_image.default
 targetEntityType: paragraph
 bundle: text_with_image
@@ -121,14 +124,20 @@ content:
     third_party_settings: {  }
     type: calibr8_cta_field_widget
     region: content
-  field_image:
-    type: image_image
-    weight: 3
-    region: content
+  field_media_image:
+    weight: 4
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      entity_browser: upload
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: false
     third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
   field_paragraph_width:
     weight: 2
     settings: {  }
@@ -150,7 +159,7 @@ content:
     type: options_select
     region: content
   field_text:
-    weight: 4
+    weight: 5
     settings:
       rows: 5
       placeholder: ''

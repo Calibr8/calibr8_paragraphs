@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.text_with_image.field_background
     - field.field.paragraph.text_with_image.field_border
     - field.field.paragraph.text_with_image.field_call_to_action
-    - field.field.paragraph.text_with_image.field_image
+    - field.field.paragraph.text_with_image.field_media_image
     - field.field.paragraph.text_with_image.field_paragraph_width
     - field.field.paragraph.text_with_image.field_subtitle
     - field.field.paragraph.text_with_image.field_subtitle_style
@@ -18,20 +18,19 @@ dependencies:
     - field.field.paragraph.text_with_image.field_title_style
     - field.field.paragraph.text_with_image.field_view_mode
     - paragraphs.paragraphs_type.text_with_image
-    - responsive_image.styles.content_2_1
   module:
     - calibr8_ds
     - ds
+    - field_formatter
     - field_group
     - link
-    - responsive_image
     - text
 third_party_settings:
   field_group:
     group_title:
       children: {  }
       parent_name: ''
-      weight: 9
+      weight: 15
       label: Title-group
       format_type: html_element
       format_settings:
@@ -64,6 +63,7 @@ third_party_settings:
     regions:
       image:
         - field_image
+        - field_media_image
       header:
         - field_title
         - field_subtitle
@@ -72,14 +72,14 @@ third_party_settings:
       footer:
         - field_call_to_action
 _core:
-  default_config_hash: yLSyQgVD7ml105IWzuCfcn_4KBFpeHrdjf_tk5ZZ2cI
+  default_config_hash: MH-eaaHMm7o6b_tstDFtY_D_h5VgcqebYOxdYdflZfE
 id: paragraph.text_with_image.image_align_bottom
 targetEntityType: paragraph
 bundle: text_with_image
 mode: image_align_bottom
 content:
   field_call_to_action:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -90,24 +90,28 @@ content:
     third_party_settings: {  }
     type: link
     region: footer
-  field_image:
-    weight: 0
+  field_media_image:
+    type: field_formatter_with_inline_settings
+    weight: 1
+    region: image
     label: hidden
     settings:
-      responsive_image_style: content_2_1
-      image_link: ''
+      field_name: field_media_image
+      label: hidden
+      type: responsive_image
+      settings:
+        responsive_image_style: content_2_1
+        image_link: ''
     third_party_settings:
       ds:
         ft:
-          id: default
+          id: minimal
           settings:
             lb: ''
             lb-col: false
             classes: {  }
-    type: responsive_image
-    region: image
   field_subtitle:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       title_element: field_subtitle_style
@@ -123,14 +127,14 @@ content:
     type: title_element
     region: header
   field_text:
-    weight: 3
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: column_1
   field_title:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       title_element: field_title_style

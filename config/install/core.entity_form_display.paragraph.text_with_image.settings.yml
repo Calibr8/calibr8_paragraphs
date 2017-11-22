@@ -1,3 +1,4 @@
+uuid: 75acc813-6524-43c3-812b-de72b4972cfb
 langcode: nl
 status: true
 dependencies:
@@ -6,7 +7,7 @@ dependencies:
     - field.field.paragraph.text_with_image.field_background
     - field.field.paragraph.text_with_image.field_border
     - field.field.paragraph.text_with_image.field_call_to_action
-    - field.field.paragraph.text_with_image.field_image
+    - field.field.paragraph.text_with_image.field_media_image
     - field.field.paragraph.text_with_image.field_paragraph_width
     - field.field.paragraph.text_with_image.field_subtitle
     - field.field.paragraph.text_with_image.field_subtitle_style
@@ -19,6 +20,8 @@ dependencies:
     - paragraphs.paragraphs_type.text_with_image
   module:
     - view_mode_selector
+_core:
+  default_config_hash: 9UnW0jL9qb-l_-a539Y3cX2HqVtKJ5u5oziNzSYnM5s
 id: paragraph.text_with_image.settings
 targetEntityType: paragraph
 bundle: text_with_image
@@ -63,7 +66,7 @@ content:
 hidden:
   created: true
   field_call_to_action: true
-  field_image: true
+  field_media_image: true
   field_subtitle: true
   field_subtitle_style: true
   field_text: true

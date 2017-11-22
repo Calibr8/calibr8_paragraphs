@@ -1,11 +1,14 @@
+uuid: 242740b7-ac8d-4a55-a62a-486ae1fed6ed
 langcode: nl
 status: true
 dependencies:
   config:
+    - entity_browser.browser.upload
     - field.field.paragraph.text_with_background_image.field_background
     - field.field.paragraph.text_with_background_image.field_border
     - field.field.paragraph.text_with_background_image.field_call_to_action
     - field.field.paragraph.text_with_background_image.field_image
+    - field.field.paragraph.text_with_background_image.field_media_image
     - field.field.paragraph.text_with_background_image.field_paragraph_width
     - field.field.paragraph.text_with_background_image.field_subtitle
     - field.field.paragraph.text_with_background_image.field_subtitle_style
@@ -20,6 +23,7 @@ dependencies:
   module:
     - allowed_formats
     - calibr8_cta
+    - entity_browser
     - field_group
     - image
     - maxlength
@@ -85,7 +89,7 @@ third_party_settings:
       children:
         - field_call_to_action
       parent_name: ''
-      weight: 5
+      weight: 6
       label: 'Call to action'
       format_type: details
       format_settings:
@@ -93,6 +97,8 @@ third_party_settings:
         required_fields: true
         classes: ''
         id: ''
+_core:
+  default_config_hash: 6MXfzmV2aPWrH2GZu_z4-kvy_7KEJykYW9Eri6bgYS0
 id: paragraph.text_with_background_image.default
 targetEntityType: paragraph
 bundle: text_with_background_image
@@ -128,6 +134,20 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_media_image:
+    weight: 4
+    settings:
+      entity_browser: upload
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
   field_paragraph_width:
     weight: 9
     settings: {  }
@@ -149,7 +169,7 @@ content:
     type: options_select
     region: content
   field_text:
-    weight: 4
+    weight: 5
     settings:
       rows: 5
       placeholder: ''

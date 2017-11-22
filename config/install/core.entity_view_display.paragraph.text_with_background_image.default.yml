@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.text_with_background_image.field_border
     - field.field.paragraph.text_with_background_image.field_call_to_action
     - field.field.paragraph.text_with_background_image.field_image
+    - field.field.paragraph.text_with_background_image.field_media_image
     - field.field.paragraph.text_with_background_image.field_paragraph_width
     - field.field.paragraph.text_with_background_image.field_subtitle
     - field.field.paragraph.text_with_background_image.field_subtitle_style
@@ -21,6 +22,7 @@ dependencies:
   module:
     - calibr8_ds
     - ds
+    - field_formatter
     - link
     - responsive_image
     - text
@@ -46,6 +48,7 @@ third_party_settings:
     regions:
       image:
         - field_image
+        - field_media_image
       header:
         - field_title
         - field_subtitle
@@ -54,7 +57,7 @@ third_party_settings:
       footer:
         - field_call_to_action
 _core:
-  default_config_hash: LnBxBMB9ZGJQRf63m1lITc-BxNM0XTKpHFlCKV2ndQE
+  default_config_hash: GJo8byTQd5jXzUIlwwwkvhGmYpST76GZtXxsJetgmI4
 id: paragraph.text_with_background_image.default
 targetEntityType: paragraph
 bundle: text_with_background_image
@@ -95,6 +98,26 @@ content:
             lb-col: false
             classes: {  }
     type: responsive_image
+    region: image
+  field_media_image:
+    weight: 5
+    label: hidden
+    settings:
+      field_name: field_media_image
+      label: hidden
+      type: responsive_image
+      settings:
+        responsive_image_style: wide_4_1
+        image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: field_formatter_with_inline_settings
     region: image
   field_subtitle:
     weight: 2

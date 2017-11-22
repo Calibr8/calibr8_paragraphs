@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.text_with_image.field_background
     - field.field.paragraph.text_with_image.field_border
     - field.field.paragraph.text_with_image.field_call_to_action
-    - field.field.paragraph.text_with_image.field_image
+    - field.field.paragraph.text_with_image.field_media_image
     - field.field.paragraph.text_with_image.field_paragraph_width
     - field.field.paragraph.text_with_image.field_subtitle
     - field.field.paragraph.text_with_image.field_subtitle_style
@@ -17,13 +17,12 @@ dependencies:
     - field.field.paragraph.text_with_image.field_title_style
     - field.field.paragraph.text_with_image.field_view_mode
     - paragraphs.paragraphs_type.text_with_image
-    - responsive_image.styles.content_2_1
   module:
     - calibr8_ds
     - ds
+    - field_formatter
     - field_group
     - link
-    - responsive_image
     - text
 third_party_settings:
   field_group:
@@ -63,6 +62,7 @@ third_party_settings:
     regions:
       image:
         - field_image
+        - field_media_image
       header:
         - field_title
         - field_subtitle
@@ -71,7 +71,7 @@ third_party_settings:
       footer:
         - field_call_to_action
 _core:
-  default_config_hash: yLSyQgVD7ml105IWzuCfcn_4KBFpeHrdjf_tk5ZZ2cI
+  default_config_hash: 5Xb8a8ZJzCNzXy1rF4gQv1YH9w2zt8r-SRFChifEbtc
 id: paragraph.text_with_image.default
 targetEntityType: paragraph
 bundle: text_with_image
@@ -89,21 +89,25 @@ content:
     third_party_settings: {  }
     type: link
     region: footer
-  field_image:
-    weight: 0
+  field_media_image:
+    weight: 15
     label: hidden
     settings:
-      responsive_image_style: content_2_1
-      image_link: ''
+      field_name: field_media_image
+      label: hidden
+      type: responsive_image
+      settings:
+        responsive_image_style: content_2_1
+        image_link: ''
     third_party_settings:
       ds:
         ft:
-          id: default
+          id: minimal
           settings:
             lb: ''
             lb-col: false
             classes: {  }
-    type: responsive_image
+    type: field_formatter_with_inline_settings
     region: image
   field_subtitle:
     weight: 2
