@@ -3,7 +3,7 @@
     "description": "Default paragraphs feature for Drupal 8",
     "type": "drupal-feature",
     "keywords": ["Drupal 8","Paragraphs","Feature"],
-    "homepage": "https://github.com/stevenvdhout/calibr8_paragraphs",
+    "homepage": "https://github.com/Calibr8/calibr8_paragraphs",
     "license": "GPL-2.0+",
     "authors": [
         {
