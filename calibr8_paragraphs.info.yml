@@ -3,7 +3,7 @@ description: 'Feature enabling default paragraph types.'
 package: Calibr8
 type: module
 core: 8.x
-version: 8.x-5.0.2
+version: 8.x-5.0.3
 dependencies:
   - allowed_formats
   - calibr8_cta
