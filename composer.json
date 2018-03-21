@@ -18,7 +18,7 @@
         "drupal/paragraphs": "~1.0",
         "drupal/view_mode_selector": "^1",
         "drupal/paragraphs_browser": "^1.0",
-        "calibrate/calibr8_media": "^5.0.4",
+        "calibrate/calibr8_media": "^5.0",
         "calibrate/calibr8_cta": "*",
         "calibrate/calibr8_ds": "*"
     }
